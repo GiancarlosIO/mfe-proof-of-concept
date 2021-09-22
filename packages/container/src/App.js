@@ -1,13 +1,15 @@
 import * as React from 'react';
+import {BrowserRouter} from 'react-router-dom';
+
 import { mount } from 'marketing/MarketingApp';
 import MarketingApp from './components/MarketingApp';
+import Header from './components/Header'
 
 export default () => {
-  return <div>
-    <h1>
-      hello there
-    </h1>
-    <hr />
-    <MarketingApp />
-  </div>
+  return <BrowserRouter>
+    <div>
+      <Header />
+      <MarketingApp />
+    </div>
+  </BrowserRouter>
 }
