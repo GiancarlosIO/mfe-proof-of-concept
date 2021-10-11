@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 
 import App from './App'
 
-const mount = (el, { onNavigate, defaulHistory, initialPath }) => {
+const mount = (el, { onNavigate, onSignin, defaulHistory, initialPath, }) => {
   const history = defaulHistory || createMemoryHistory({
     initialEntries: [initialPath]
   });
@@ -14,7 +14,7 @@ const mount = (el, { onNavigate, defaulHistory, initialPath }) => {
   }
 
   ReactDOM.render(
-    <App history={history} />,
+    <App history={history} onSignin={onSignin} />,
     el
   )
 
